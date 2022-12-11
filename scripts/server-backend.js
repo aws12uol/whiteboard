@@ -368,13 +368,10 @@ function startBackendServer(port) {
     });
 
     // Connect database
-    mongoose.connect(
-        "mongodb://icc-cosmos-db:jFXPzDiFAHrlwVptHZ736lkwp9WDQHb3imerLNhDwT6a8Evq3JvNJAcAaZqLC8DnUA7BQN8vMI2qACDbeSQzKQ==@icc-cosmos-db.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@icc-cosmos-db@",
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        }
-    );
+    mongoose.connect("", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
 
     //Prevent cross site scripting (xss)
     function escapeAllContentStrings(content, cnt) {
